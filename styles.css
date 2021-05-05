@@ -1,0 +1,125 @@
+html {
+  height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  background-color: hsl(204, 43%, 93%);
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  padding-bottom: 1rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 1rem 1.5rem 1rem;
+}
+
+.general {
+  box-sizing: border-box;
+  padding: 2rem 1.5rem 1rem;
+  background-color: hsl(179, 62%, 43%);
+  color: white;
+}
+
+header {
+  font-size: 20px;
+  font-weight: bolder;
+}
+/*********** first segment */
+.first-segment {
+  background-color: white;
+  border-radius: 15px 15px 0 0;
+  grid-area: f;
+}
+
+#blue {
+  color: hsl(179, 62%, 43%);
+}
+
+.first-segment #green-weight {
+  color: hsl(71, 73%, 54%);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+#blue-light {
+  color: hsl(179, 62%, 43%);
+  line-height: 2;
+}
+/*********** second segment */
+#like-h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+#like-h1 var {
+  opacity: 0.5;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  bottom: 5px; left: 5px;
+}
+
+button {
+  background-color: hsl(71, 73%, 54%);
+  border-radius: 5px;
+  border-style: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 2pt;
+  width: 100%; height: 3rem;
+  box-shadow: 0px 3px 20px gray;
+  margin: 10px 0;
+}
+button:hover {background-color: hsl(81, 73%, 54%)}
+button:focus {outline: none;}
+button:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+/*********** third segment */
+.third-segment {
+  opacity: 80%;
+  border-radius: 0 0 15px 15px;
+}
+.third-segment p {
+  opacity: 0.5;
+  line-height: 2;
+}
+
+@media (min-width: 600px) {
+  body {
+    padding-bottom: 0;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'f f';
+    box-sizing: border-box;
+    padding: 2rem 1.5rem 1rem;
+    max-width: 1000px;
+    position: absolute;
+    top: 50%; left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  .second-segment {
+    border-radius: 0 0 0 15px;
+  }
+  .third-segment {
+    border-radius: 0 0 15px 0;
+  }
+}
